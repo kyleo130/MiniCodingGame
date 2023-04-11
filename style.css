@@ -14,14 +14,11 @@ html, body {
     height: 75%;
 }
 
-#screen {
+#canvas {
     position: relative;
     border: 2px solid black;
     width: 640px;
     height: 480px;
-}
-
-canvas {
     background: url(background1.png);
-    background-size: cover;
+    background-size: contain;
 }
