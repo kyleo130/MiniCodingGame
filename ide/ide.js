@@ -27,31 +27,44 @@ let defaultCode =
 
 for () {
 
-}
-`
+}`
 
-/*
+
 let answer = 
 `// You are given the following function:
 // hit() -- Hit the door once
 
 for (let i = 0; i < 100; i++) {
     hit();
-}
-`
-*/
+}`
 
-editor.session.setValue(defaultCode);
+editor.session.setValue(answer);
 
 let submitButton = document.getElementById("submit");
 let resetButton = document.getElementById("reset")
-let outputBox = document.getElementById("output");
+let outputBox = document.getElementById("outputBox");
+
+let skeletonBefore = 
+`
+let count = 0;
+
+function hit() {
+    count += 1;
+}
+
+`
+
+let skeletonAfter = 
+`
+
+count.valueOf();`
 
 submitButton.addEventListener('click', function() {
     let code = editor.getValue();
     try {
-        let result = eval(code);
+        let result = eval(skeletonBefore + code + skeletonAfter);
         outputBox.innerText = result;
+        setHitCount(result);
     } catch (error) {
         outputBox.innerText = "There is something wrong in your code.";
     }

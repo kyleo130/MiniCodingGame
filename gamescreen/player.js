@@ -10,6 +10,7 @@ const Player = function(ctx, x, y) {
 
     return {
         draw: sprite.draw,
-        update: sprite.update
+        update: sprite.update,
+        setXY: sprite.setXY
     };
 };
