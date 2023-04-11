@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    width: 99%;
 }
 
 .row {
@@ -10,5 +11,14 @@ html, body {
 }
 
 .ide {
-    height: 80%;
+    height: 75%;
+}
+
+#screen {
+    position: relative;
+    border: 2px solid black;
+    width: 640px;
+    height: 480px;
+    max-width: 100%;
+    max-height: 75%;
 }
