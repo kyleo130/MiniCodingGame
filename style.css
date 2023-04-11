@@ -4,8 +4,8 @@ html, body {
 }
 
 .row {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-top: 2%;
     display: flex;
 }
@@ -19,6 +19,4 @@ html, body {
     border: 2px solid black;
     width: 640px;
     height: 480px;
-    max-width: 100%;
-    max-height: 75%;
 }
