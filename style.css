@@ -17,8 +17,8 @@ html, body {
 #canvas {
     position: relative;
     border: 2px solid black;
-    width: 640px;
-    height: 480px;
+    width: 100%;
+    height: auto;
     background: url(background1.png);
     background-size: contain;
 }
