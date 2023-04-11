@@ -5,7 +5,6 @@ const Smoke = function(ctx, x, y) {
     const sprite = Sprite(ctx, x, y);
 
     sprite.setSequence(sequence)
-          .setScale(1)
           .useSheet("./asset/Projectiles/projectiles x1.png");
 
     const start = function() {

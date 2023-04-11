@@ -10,7 +10,7 @@ const Sprite = function(ctx, x, y) {
     // - `count` - The total number of sprite images in the sequence
     // - `timing` - The timing for each sprite image
     // - `loop` - `true` if the sprite sequence is looped
-    let sequence = { x: 0, y: 0, width: 20, height: 20, count: 1, timing: 0, loop: false };
+    let sequence = { x: 0, y: 0, width: 32, height: 32, count: 1, timing: 0, loop: false };
 
     // This is the index indicating the current sprite image used in the sprite sequence.
     let index = 0;
@@ -93,7 +93,6 @@ const Sprite = function(ctx, x, y) {
         /* Get the display size of the sprite */
         const size = getDisplaySize();
 
-
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(
             sheet,
@@ -126,8 +125,6 @@ const Sprite = function(ctx, x, y) {
     const update = function(time) {
         if (lastUpdate == 0) lastUpdate = time;
 
-
-        /* TODO */
         /* Move to the next sprite when the timing is right */
         if (time - lastUpdate >= sequence.timing) {
             index++;

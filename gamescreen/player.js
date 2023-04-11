@@ -5,7 +5,6 @@ const Player = function(ctx, x, y) {
     const sprite = Sprite(ctx, x, y);
 
     sprite.setSequence(sequence)
-          .setScale(1)
           .useSheet("./asset/Players/players blue x1.png");
 
     return {
