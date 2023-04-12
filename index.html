@@ -21,7 +21,7 @@
     <div id="description">
       [1/10] <br>
       The door is locked. You do not have the key, but you realize that you can just break the door by
-      hitting it <b>100</b> times. <br>
+      hitting it <b>200</b> times. <br>
       You can hit the door once by calling the function <b><i>hit()</i></b> directly.
       <br>
       <br>
@@ -43,7 +43,17 @@
         <button id="submit" class="btn btn-success col-lg-7 m-2">Submit</button>
       </div>
 
-      <div id="outputBox">Output</div>
+      <div id="alertSuccess" class="alert alert-success" style="display: none;">
+        <strong>Success!</strong> You break the door!
+      </div>
+
+      <div id="alertFail" class="alert alert-danger" style="display: none;">
+        <strong>You didn't break the door.</strong> Try again!
+      </div>
+      
+      <div id="alertProblem" class="alert alert-warning" style="display: none;">
+        <strong>Oops!</strong> There are some problem in your code...
+      </div>
     </div>
   </div>
 

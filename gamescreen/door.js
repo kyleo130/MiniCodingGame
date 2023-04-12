@@ -10,7 +10,7 @@ const Door = function(ctx, x, y) {
     sprite.setSequence(sequences.normal)
           .useSheet("asset/Props and Items/props and items x1.png");
 
-    const normal = function() {
+    const repair = function() {
         sprite.setSequence(sequences.normal);
     };
 
@@ -19,7 +19,7 @@ const Door = function(ctx, x, y) {
     };
 
     return {
-        normal: normal,
+        repair: repair,
         destroy: destroy,
         draw: sprite.draw,
         update: sprite.update

@@ -6,13 +6,56 @@ const player = Player(context, 304, 152);
 let smokes = [];
 
 let hitCount = 0;
-let hitLeft = 100;
+let hitLeft = 200;
+
+let submitted = false;
+
+function setSubmitted(val) {
+  submitted = val;
+}
 
 function setHitCount(count) {
+  resetHit();
   hitCount = count;
 }
 
+function resetHit() {
+  hitCount = 0;
+  hitLeft = 200;
+}
+
+function sendSuccess() {
+  console.log("success");
+  document.getElementById("alertSuccess").style.display = "block";
+  document.getElementById("alertFail").style.display = "none";
+  document.getElementById("alertProblem").style.display = "none";
+  document.getElementById("submit").disabled = false;
+  setSubmitted(false);
+}
+
+function sendFail() {
+  console.log("fail");
+  document.getElementById("alertSuccess").style.display = "none";
+  document.getElementById("alertFail").style.display = "block";
+  document.getElementById("alertProblem").style.display = "none";
+  document.getElementById("submit").disabled = false;
+  setSubmitted(false);
+}
+
 function doFrame(now) {
+    if (submitted) {
+      document.getElementById("submit").disabled = true;
+      door.repair();
+
+      if (hitLeft == 0) {
+        setTimeout(sendSuccess, 1000);
+      } else if (hitCount == 0) {
+        if (hitLeft > 0) {
+          setTimeout(sendFail, 1000);
+        }
+      }
+    }
+
     if (hitCount > 0 && hitLeft > 0) {
       hitCount--;
       hitLeft--;
