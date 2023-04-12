@@ -16,16 +16,7 @@ for () {
 
 }`
 
-
-let answer = 
-`// You are given the following function:
-// hit() -- Hit the door once
-
-for (let i = 0; i < 200; i++) {
-    hit();
-}`
-
-editor.session.setValue(answer);
+editor.session.setValue(defaultCode);
 
 let submitButton = document.getElementById("submit");
 let resetButton = document.getElementById("reset")

@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     width: 99%;
+    background: url(image/background.png);
+    overflow: au0;
 }
 
 .row {
@@ -14,11 +16,20 @@ html, body {
     height: 75%;
 }
 
+#description {
+    font-size: 15px;
+}
+
+#editor {
+    border: 2px solid #0d47a1;
+}
+
 #canvas {
     position: relative;
-    border: 2px solid black;
     width: 100%;
     height: auto;
-    background: url(background1.png);
+    background: url(image/level1.png);
     background-size: contain;
+    border-radius: 10px;
+    border: 2px solid #0d47a1;
 }
