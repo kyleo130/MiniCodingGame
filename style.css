@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     width: 99%;
     background: url(image/background.png);
-    overflow: au0;
+    overflow: auto;
 }
 
 .row {
