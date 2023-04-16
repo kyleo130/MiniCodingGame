@@ -1,4 +1,4 @@
-const Sprite = function(ctx, x, y) {
+export const Sprite = function(ctx, x, y) {
 
     const sheet = new Image();
 

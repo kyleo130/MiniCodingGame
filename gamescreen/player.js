@@ -1,4 +1,5 @@
-const Player = function(ctx, x, y) {
+import {Sprite} from "./sprite.js"
+export const Player = function(ctx, x, y) {
 
     const sequence = { x: 0, y: 0, width: 32, height: 32, count: 1, timing: 100, loop: false };
 

@@ -1,4 +1,5 @@
-const Door = function(ctx, x, y) {
+import {Sprite} from "./sprite.js"
+export const Door = function(ctx, x, y) {
 
     const sequences = { 
         normal:  { x: 0, y: 512, width: 64, height: 32, count: 1, timing: 100, loop: false },

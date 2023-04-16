@@ -1,3 +1,7 @@
+import {Door} from "./door.js"
+import {Player} from "./player.js"
+import {Smoke} from "./smoke.js"
+
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
@@ -10,11 +14,11 @@ let hitLeft = 200;
 
 let submitted = false;
 
-function setSubmitted(val) {
+export function setSubmitted(val) {
   submitted = val;
 }
 
-function setHitCount(count) {
+export function setHitCount(count) {
   resetHit();
   hitCount = count;
 }

@@ -1,3 +1,5 @@
+import {setSubmitted, setHitCount} from "../gamescreen/process.js"
+
 ace.require("ace/ext/language_tools");
 let editor = ace.edit("editor");
 editor.setTheme("ace/theme/cobalt");
