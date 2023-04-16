@@ -40,6 +40,9 @@ submitButton.addEventListener('click', function() {
     let code = editor.getValue();
     try {
         let result = eval(skeletonBefore + code + skeletonAfter);
+        document.getElementById("alertSuccess").style.display = "none";
+        document.getElementById("alertFail").style.display = "none";
+        document.getElementById("alertProblem").style.display = "none";
         setSubmitted(true);
         setHitCount(result);
     } catch (err) {
